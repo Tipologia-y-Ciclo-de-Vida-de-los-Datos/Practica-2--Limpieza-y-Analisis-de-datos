@@ -13,7 +13,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Tipologia-y-Ciclo-de-Vida-de-los-Datos/Practica-2--Limpieza-y-Analisis-de-datos">
-    <img src="https://user-images.githubusercontent.com/57969201/232225800-5c7ecb7a-3f55-47cc-bd46-a94e17dfe6e2.png" alt="Logo" width="390" height="120">
+    <img src="https://github.com/Tipologia-y-Ciclo-de-Vida-de-los-Datos/Practica-2--Limpieza-y-Analisis-de-datos/assets/57969201/80c8c9be-1fb8-4ced-8dc8-f49998c328c2" alt="Logo" width="390" height="120">
   </a>
   
 
