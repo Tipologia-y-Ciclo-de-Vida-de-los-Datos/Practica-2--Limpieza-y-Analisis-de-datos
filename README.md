@@ -1,3 +1,4 @@
+
 <div id="top"></div>
 
 <!-- PROJECT SHIELDS -->
@@ -31,18 +32,19 @@
   <summary>ÍNDICE</summary>
   <ol>
     <li>
-      <a href="#sobre-el-proyecto">Sobre el proyecto</a>
+      <a href="#sobre-los-datasets">Sobre los Datasets</a>
       <ul>
-        <li><a href="#herramientas-y-librerias-utilizadas">Herramientas y Librerias utilizadas</a></li>
+        <li><a href="#descripcioen-de-los-datasets">Descripción de los Datasets</a></li>
+        <li><a href="#herramientas-y-librerias">Herramientas y Librerias utilizadas</a></li>
       </ul>
     </li>
     <li>
-      <a href="#inicio-del-proyecto">Incio del proyecto</a>
+      <a href="#el-proyecto">El proyecto</a>
       <ul>
-        <li><a href="#requisitos-previos">Requisitos previos</a></li>
+        <li><a href="#requisitos">Requisitos previos</a></li>
+        <li><a href="#codigo-de-la-practica">Código de la Práctica</a></li>
       </ul>
-    </li>
-    <li><a href="#dataset-link">Dataset link</a></li>
+    </li>    
     <li><a href="#contactos">Contactos</a></li>
   </ol>
 </details>
@@ -50,36 +52,36 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Sobre el proyecto
+## Sobre los datasets
+
 <div align="center">
 <a href="https://www.expatistan.com/cost-of-living/index?ranking=1">
     <img src="https://user-images.githubusercontent.com/57969201/232224215-296bb7d1-10bb-4db9-b3b8-bdf1da25453c.png" alt="Page" width="670" height="580">
   </a>
 </div>
 
-MODIFICAR PARA PONER AQUI UNA DESCRIPCION DEL PROYECTO
+### Descripción de los datasets
 
 Expatistan es un <i>webpage</i> que nos ofrece una forma sencilla, intiutiva y eficaz de visualizar el coste de vida por ciudades y países. Además, también se pueden hacer comparativas entre ellos y cálcular tu salarios aproximado por ciudad actual y ciudad de destino. </br></br>
 
-Par este proyecto nos centraremos en extraer los datos que hacer referencia a cada ciudad y país explicados por la página web. De ahí que en el repositorio hayan dos datasets extraídos: `cost_of_living_cities.csv` y `cost_of_living_countries.csv`. Como dicen sus nombres, cada uno corresponde al tipo de Web Scraping realizado en la página web y contendrán los siguinetes valores. 
+Par este proyecto nos centraremos en ampliar la extracción de datos sobre países que hicismos sobre Expatistan para la práctica 1 con los datos del PIB anual y SMI del <i>webpage</i> Datosmacro. De ahí que en el repositorio hayan dos datasets originales: `PIB_SMI_divisas.xlsx` y `cost_of_living_countries.csv`. Como dicen sus nombres, cada uno corresponde al tipo de datos que contienen y, con el notebook `Ampliaciones del dataset.ipynb` que se puede encontrar dentro del directorio `/code`, los fusionaremos para crear el dataset inicial de la práctica: `cost_of_living_countries_updated.csv`. Este dataset contiene las siguientes variables:
 
-| cost_of_living_cities.csv  | cost_of_living_countries.csv | Explicación                                                                                      |
+| cost_of_living_cities.csv  | Tipo de variable             | Explicación                                                                                      |
 | -------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------ |
-| Ranking position           | Ranking position             | Posición numérica del país o ciudad en el Raking de la web                                       |
-| Country                    | Country                      | Nombre del país de originen de la ciudad o país al que se le hace el Web Scraping respectivamente|
-| City                       | (No presenta esta columna)   | Nombre de la ciudad a la que se le está aplicando el Web Scraping                                |
-| State                      | (No presenta esta columna)   | Nombre del estado, si lo presenta, de la ciudad a la que se le está aplicando el Web Scraping    |
-| Category                   | Category                     | Nombre de la clasificación genérica que se le ha otorgado a un conjunto de `items`               |
-| Items                      | Items                        | Objetos o servicioscuyos precios nos sirven para estimar el coste de vida por país o ciudad      |
-| Original Currency          | Original Currency            | Nombre de la moneda usada por el país o ciudad a los que se ha aplicado el Web Scraping          |
-| Original Currency Value    | Original Currency Value      | Valor de la moneda usada por el país o ciudad a los que se ha aplicado el Web Scraping           |
-| Exchanged Currency         | Exchanged Currency           | Nombre de la moneda usada para el cambio de divisa                                               |
-| Exchanged Currency Value   | Exchanged Currency Value     | Valor de la moneda usada para el cambio de divisa                                                |
+| Ranking position           | int                          | Posición numérica del país o ciudad en el Raking de la web                                       |
+| Country                    | chr                          | Nombre del país de originen de la ciudad o país al que se le hace el Web Scraping respectivamente|
+| Category                   | chr                          | Nombre de la clasificación genérica que se le ha otorgado a un conjunto de `items`               |
+| Items                      | chr                          | Objetos o servicioscuyos precios nos sirven para estimar el coste de vida por país o ciudad      |
+| Original Currency          | chr                          | Nombre de la moneda usada por el país o ciudad a los que se ha aplicado el Web Scraping          |
+| Original Currency Value    | chr                          | Valor de la moneda usada por el país o ciudad a los que se ha aplicado el Web Scraping           |
+| Exchanged Currency         | chr                          | Nombre de la moneda usada para el cambio de divisa                                               |
+| Exchanged Currency Value   | chr                          | Valor de la moneda usada para el cambio de divisa                                                |
+| PIB anual                  | chr                          | Último valor deProducto Interior Bruto anual registrado por país en Euros                        |
+| SMI (dolares)              | chr                          | Salario Mínimo Interprofesional por país en Dólares                                              |
+|SMI (euros)                 | chr                          | Salario Mínimo Interprofesional por país en Euros                                                |
 
 </br></br>
-Estos CSV se consiguen a partir del código explicado en el Jupyter notebook `Scraping-notebook.ipynb`, que contiene una pequeña introducción a la página web y el Web Scraping de Ciudades (clase `ExpatistanCityScraper()`) y de Países (clase `ExpatistanCountryScraper()`).
-
-
+Una vez se lleve a cabo y se finalice la limpieza de los datos, este dataset final se guardará (apartado 3. Guardamos los datos pre-procesados) bajo el nombre `cost_of_living_countries_clean.csv`.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -99,9 +101,12 @@ Estos CSV se consiguen a partir del código explicado en el Jupyter notebook `Sc
 * caret
 * vcd
 * pROC
+* pandas 
+* mtranslate 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+## El proyecto
 
 ### Requisitos previos
 
@@ -109,11 +114,17 @@ Estos CSV se consiguen a partir del código explicado en el Jupyter notebook `Sc
 2. Tener python instalado en la máquina si se quiere usar el notebook en local.
 3. Tener instalado RStudio y R en elocal junto con las librerías mencionadas en el punto anterior
 
-<!-- Dataset link -->
-## Dataset link
+### Código de la Práctica
+Para pòder dar incio a la práctica, tenemos como primera parte el notebook `Ampliaciones del dataset.ipynb` en el directorio `/code`. Este notebook tendrá como función principal generar el dataset que usaremos a lo largo de la práctica: `cost_of_living_countries_updated.csv`. Sin embargo, como no era posible una unión directa de los datos del PIB anual y SMI con el dataset extraído en la primera práctica, se han llevado a cabo los isguinertes pasos:
+1. Cargar las distintas hojas del dataset `PIB_SMI_divisas.xlsx`, una para el PIB y otra para los valores del SMI
+2. Cargar el dataset original `cost_of_living_countries.csv`
+3. Combinar los dataframes del punto 1 tomando como referencia la columna "Países"
+4. Eliminar los espacios y caracteres especiales de la columna "Países" de cada dataframe del punto 1
+5. Traducir los nombres de cada país del español al inglés
+6. Renombrar la columna como "Country"
+7. Fusionar el dataset original con los nuevos datos y guardar como `cost_of_living_countries_updated.csv`
 
-NO SE SI SE NECESITA
-- Cost of Living by Country: https://doi.org/10.5281/zenodo.7833244
+En cuanto al código principal de la práctica, este se puede encontrar en el directorio `/source`, donde está el archivo rmd `PRA2_Data_cleaning_and_analysis.Rmd` que hemos generado el RStudio para hacer el informe interactivo resultante.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -121,6 +132,7 @@ NO SE SI SE NECESITA
 
 <!-- CONTACT -->
 ## Contactos
+
 Este proyecto ha sido llevado a cabo por:
 1. José Luis Santos Durango - josant05@uoc.edu
 2. María Isabel González Sánchez - mgonzalezsanchez19@uoc.edu
@@ -129,9 +141,6 @@ Contáctanos: [Miembros del equipo](https://github.com/Tipologia-y-Ciclo-de-Vida
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
