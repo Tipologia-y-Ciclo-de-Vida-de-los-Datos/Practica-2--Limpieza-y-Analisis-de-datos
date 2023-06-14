@@ -212,7 +212,7 @@ Por último, nos queda la transformación a euros y la haremos usando el último
 
 ```{r message=FALSE, warning=FALSE}
 # Cargamos el dataset de divisas
-df_divisas <- read_excel("../datasets/PBI_SMI_divisas.xlsx", sheet="Divisas")
+df_divisas <- read_excel("../datasets/PIB_SMI_divisas.xlsx", sheet="Divisas")
 
 # Obtenemos la tasa de conversión de euros a dolares
 tasa_conversion <- df_divisas$Cambio[df_divisas$Países == "Dólares USA [+]"]

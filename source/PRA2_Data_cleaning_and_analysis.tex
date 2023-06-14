@@ -128,7 +128,7 @@
 \subtitle{Tipología y ciclo de vida de los datos \textbar{} 2022/23 - 2}
 \author{Jose Luis Santos Durango \textbar{} María Isabel González
 Sánchez}
-\date{13 de June, 2023}
+\date{15 de junio, 2023}
 
 \begin{document}
 \maketitle
@@ -470,7 +470,7 @@ Por último, nos queda la transformación a euros y la haremos usando el
 \begin{Shaded}
 \begin{Highlighting}[]
 \CommentTok{\# Cargamos el dataset de divisas}
-\NormalTok{df\_divisas }\OtherTok{\textless{}{-}} \FunctionTok{read\_excel}\NormalTok{(}\StringTok{"../datasets/PBI\_SMI\_divisas.xlsx"}\NormalTok{, }\AttributeTok{sheet=}\StringTok{"Divisas"}\NormalTok{)}
+\NormalTok{df\_divisas }\OtherTok{\textless{}{-}} \FunctionTok{read\_excel}\NormalTok{(}\StringTok{"../datasets/PIB\_SMI\_divisas.xlsx"}\NormalTok{, }\AttributeTok{sheet=}\StringTok{"Divisas"}\NormalTok{)}
 
 \CommentTok{\# Obtenemos la tasa de conversión de euros a dolares}
 \NormalTok{tasa\_conversion }\OtherTok{\textless{}{-}}\NormalTok{ df\_divisas}\SpecialCharTok{$}\NormalTok{Cambio[df\_divisas}\SpecialCharTok{$}\NormalTok{Países }\SpecialCharTok{==} \StringTok{"Dólares USA [+]"}\NormalTok{]}
