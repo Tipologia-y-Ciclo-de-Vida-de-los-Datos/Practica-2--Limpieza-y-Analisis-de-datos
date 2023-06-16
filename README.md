@@ -14,7 +14,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/Tipologia-y-Ciclo-de-Vida-de-los-Datos/Practica-2--Limpieza-y-Analisis-de-datos">
-    <img src="https://github.com/Tipologia-y-Ciclo-de-Vida-de-los-Datos/Practica-2--Limpieza-y-Analisis-de-datos/assets/57969201/80c8c9be-1fb8-4ced-8dc8-f49998c328c2" alt="Logo" width="390" height="130">
+    <img src="https://www.rstudio.com/wp-content/uploads/2018/10/RStudio-Logo-Flat.png" alt="Logo" width="390" height="130">
   </a>
   
 
